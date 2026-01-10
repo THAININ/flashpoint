@@ -1,0 +1,33 @@
+# --- Banco de Dados ---
+*.sqlite3
+db.sqlite3
+
+# --- Ambientes Virtuais (Essencial) ---
+venv/
+.venv/
+env/
+ENV/
+bin/
+lib/
+include/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# --- Segredos e Configurações ---
+.env
+local_settings.py
+
+# --- Arquivos Estáticos e Mídia ---
+# Geralmente não subimos os arquivos enviados por usuários ou coletados
+/static/
+/media/
+/staticfiles/
+
+# --- IDEs e SO ---
+.vscode/
+.idea/
+.DS_Store
