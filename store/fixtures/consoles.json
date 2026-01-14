@@ -1,0 +1,57 @@
+[
+  {
+    "model": "store.consolemodel",
+    "pk": 1,
+    "fields": {
+      "nome": "PlayStation 5",
+      "ano": "2020-11-12",
+      "estado": "N",
+      "preço": "R$ 4.000,00",
+      "descrição": "Edição padrão, disco"
+    }
+  },
+  {
+    "model": "store.consolemodel",
+    "pk": 2,
+    "fields": {
+      "nome": "Xbox Series X",
+      "ano": "2020-11-10",
+      "estado": "N",
+      "preço": "R$ 3.800,00",
+      "descrição": "Console novo, versão 1TB"
+    }
+  },
+  {
+    "model": "store.consolemodel",
+    "pk": 3,
+    "fields": {
+      "nome": "Nintendo Switch OLED",
+      "ano": "2021-10-08",
+      "estado": "N",
+      "preço": "R$ 2.500,00",
+      "descrição": "Console portátil/TV, tela OLED"
+    }
+  },
+  {
+    "model": "store.consolemodel",
+    "pk": 4,
+    "fields": {
+      "nome": "PlayStation 4 Pro",
+      "ano": "2016-11-10",
+      "estado": "U",
+      "preço": "R$ 1.200,00",
+      "descrição": "Usado em bom estado"
+    }
+  },
+  {
+    "model": "store.consolemodel",
+    "pk": 5,
+    "fields": {
+      "nome": "Xbox One S",
+      "ano": "2016-08-02",
+      "estado": "U",
+      "preço": "R$ 900,00",
+      "descrição": "Usado, com controle extra"
+    }
+  }
+]
