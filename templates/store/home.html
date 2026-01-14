@@ -10,6 +10,10 @@
 <body>
 
     <a href="{% url 'store:consoles' %}">Consoles</a>
-
+    {% for console in consoles %}
+        <h4>{{console.nome}}</h4>
+        <h4>{{console.estado}}</h4>
+        <h4>{{console.preço}}</h4>
+    {% endfor %}
 </body>
 </html>
