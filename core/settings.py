@@ -121,3 +121,5 @@ STATIC_URL = 'static/'
 
 #set new user model
 AUTH_USER_MODEL = 'users.CustomUser'
+
+LOGIN_URL = 'users:login'
