@@ -10,6 +10,7 @@ class ConsoleModel(models.Model):
     }
     estado = models.CharField(max_length=1, choices=ESTADOS)
     preço = models.CharField(max_length=10)
+    imagem = models.ImageField(upload_to='consoles/')
     descrição = models.TextField(null = True, blank = True)
     
     def __str__(self):

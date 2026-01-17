@@ -14,10 +14,10 @@ def home_view(request):
 
 def consoles_view(request:HttpRequest):
     if request.method == 'POST':
-        formulario = ConsoleForm(request.POST)
+        formulario = ConsoleForm(request.POST, request.FILES)
         if formulario.is_valid():
             formulario.save()
-            return redirect('store:consoles')
+            return redirect('store:home')
     context = {
         'form':ConsoleForm
     }

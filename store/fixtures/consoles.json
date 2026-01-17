@@ -7,6 +7,7 @@
       "ano": "2020-11-12",
       "estado": "N",
       "preço": "R$ 4.000,00",
+      "imagem": "fotos/ps5.jpg",
       "descrição": "Edição padrão, disco"
     }
   },
@@ -18,6 +19,7 @@
       "ano": "2020-11-10",
       "estado": "N",
       "preço": "R$ 3.800,00",
+      "imagem": "fotos/series x.png",
       "descrição": "Console novo, versão 1TB"
     }
   },
@@ -29,6 +31,7 @@
       "ano": "2021-10-08",
       "estado": "N",
       "preço": "R$ 2.500,00",
+      "imagem": "fotos/switch.jpg",
       "descrição": "Console portátil/TV, tela OLED"
     }
   },
@@ -40,6 +43,7 @@
       "ano": "2016-11-10",
       "estado": "U",
       "preço": "R$ 1.200,00",
+      "imagem": "fotos/ps4.jpeg",
       "descrição": "Usado em bom estado"
     }
   },
@@ -51,6 +55,7 @@
       "ano": "2016-08-02",
       "estado": "U",
       "preço": "R$ 900,00",
+      "imagem": "fotos.series s.jpg",
       "descrição": "Usado, com controle extra"
     }
   }

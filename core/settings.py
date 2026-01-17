@@ -119,6 +119,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'  
+]
+
+# User-uploaded files's directory
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = '/media/'
+
+
 #set new user model
 AUTH_USER_MODEL = 'users.CustomUser'
 
