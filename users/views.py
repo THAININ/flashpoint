@@ -22,7 +22,7 @@ def user_login(request):
         user = authenticate(request,username=username,password=password)
         if user is not None:
             login(request,user)
-            return render(request,'store/home.html')
+            return redirect('store:home.html')
     else:
         context = {'form': LoginForm()}
         return render(request,'users/login.html',context)
