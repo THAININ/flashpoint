@@ -132,5 +132,5 @@ MEDIA_URL = '/media/'
 
 #set new user model
 AUTH_USER_MODEL = 'users.CustomUser'
-
+#set the login url for the login_required decorator
 LOGIN_URL = 'users:login'
