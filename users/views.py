@@ -22,7 +22,7 @@ def user_login(request):
         user = authenticate(request,username=username,password=password)
         if user is not None:
             login(request,user)
-            return redirect('store:home.html')
+            return redirect('store:home')
     else:
         context = {'form': LoginForm()}
         return render(request,'users/login.html',context)
@@ -30,7 +30,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return redirect('users:login')
+    return redirect('store:home')
 
 @login_required
 def user_profile(request):
