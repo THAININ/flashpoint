@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,3 +136,18 @@ MEDIA_URL = '/media/'
 AUTH_USER_MODEL = 'users.CustomUser'
 #set the login url for the login_required decorator
 LOGIN_URL = 'users:login'
+
+#EMAIL CONFIG
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+
+#.env
+
+load_dotenv()
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+DEBUG=os.getenv('DEBUG') == 'True'
+

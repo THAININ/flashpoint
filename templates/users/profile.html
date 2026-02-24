@@ -1,16 +1,30 @@
-<h1>um salve pros mano da quimioterapia</h1>
-<h2>Meu Perfil</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Meu Perfil</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+            
+            <button type="submit">Salvar alterações</button>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
 
-<form method="post">
-    {% csrf_token %}
-    
-    {{ form.as_p }}
-    
-    <button type="submit">Salvar Alterações</button>
-</form>
-
-{% if messages %}
-    {% for message in messages %}
-        <p style="color: green;">{{ message }}</p>
-    {% endfor %}
-{% endif %}
+        <form action="{% url 'users:password_reset' %}" method="post">
+            {% csrf_token %}
+            <button>Alterar senha</button>
+        </form>
+    </main>
+</body>
+</html>

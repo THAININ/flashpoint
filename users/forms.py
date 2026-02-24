@@ -1,6 +1,6 @@
 from django import forms
 from .models import CustomUser
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordResetForm
 
 class RegisterForm(UserCreationForm):
     birth_date = forms.DateField(required=False, widget=forms.DateInput(attrs={'type': 'date'})) #deixo o resto pra galera do front

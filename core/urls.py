@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('store.urls')),
     path('payments/', include('payments.urls')),
-    path('users/', include('users.urls'))
+    path('users/', include('users.urls')),
 ]
 
 # acesso a arquivos de mídia quando debug = True (durante desenvolvimento)

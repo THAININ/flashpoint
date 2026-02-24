@@ -50,5 +50,3 @@ def user_profile(request):
     context = {'form': form}
     return render(request, 'users/profile.html', context)
 
-def reset_password(request):
-    return render(request, 'users/reset_password.html')
