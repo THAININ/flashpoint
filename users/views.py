@@ -26,7 +26,7 @@ def user_login(request):
             login(request,user)
             return redirect('store:home')
         else:
-            messages.error(request,'Invalid username or password')
+            messages.warning(request, 'Invalid username or password. Please try again.')
             return render(request, 'users/login.html', {'form': form})
     else:
         context = {'form': LoginForm()}
@@ -39,6 +39,11 @@ def user_logout(request):
 
 @login_required
 def user_profile(request):
+    context = {'user': request.user}
+    return render(request, 'users/profile.html', context)
+
+@login_required
+def update_profile(request):
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
@@ -48,5 +53,4 @@ def user_profile(request):
     else:
         form = UserUpdateForm(instance=request.user)
     context = {'form': form}
-    return render(request, 'users/profile.html', context)
-
+    return render(request, 'users/update_profile.html', context)

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block subtitle %}Meu Perfil{% endblock %}
+{% block content %}
+        <form method="post">
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+            
+            <button type="submit">Salvar alterações</button>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form action="{% url 'users:password_reset' %}" method="post">
+            {% csrf_token %}
+            <button>Alterar senha</button>
+        </form>
+    <input type="button" value="Voltar para Perfil" onclick="window.location.href='{% url 'users:profile' %}'">
+{% endblock %}

@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        <h1>Meu Perfil</h1>
-        <form method="post">
-            {% csrf_token %}
-            
-            {{ form.as_p }}
-            
-            <button type="submit">Salvar alterações</button>
-        </form>
-        {% if messages %}
-            {% for message in messages %}
-                <p style="color: green;">{{ message }}</p>
-            {% endfor %}
-        {% endif %}
-
-        <form action="{% url 'users:password_reset' %}" method="post">
-            {% csrf_token %}
-            <button>Alterar senha</button>
-        </form>
-    </main>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block subtitle %}Meu Perfil{% endblock %}
+{% block content %}
+    <h1>Meu Perfil</h1>
+        <p><strong>Nome:</strong> {{ user.first_name }}</p>
+        <p><strong>Sobrenome:</strong> {{ user.last_name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Data de Nascimento:</strong> {{ user.birth_date }}</p>
+        <p><strong>Bio:</strong> {{ user.bio }}</p>
+        <p><strong>Membro desde:</strong> {{ user.date_joined }}</p>
+    <input type="button" value="Editar Perfil" onclick="window.location.href='{% url 'users:update_profile' %}'">
+{% endblock %}
