@@ -1,0 +1,30 @@
+# Ambientes Virtuais (Essencial!)
+.venv/
+venv/
+ENV/
+
+# Dependências de Node (Se houver)
+node_modules/
+
+# Arquivos de Banco de Dados local
+*.sqlite3
+db.sqlite3
+
+# Logs e Dados Temporários
+*.log
+.DS_Store
+.env
+
+# Controle de Versão
+.git/
+.gitignore
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pastas de arquivos estáticos e media (se forem gerados dinamicamente)
+static/
+media/

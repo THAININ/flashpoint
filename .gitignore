@@ -31,3 +31,7 @@ local_settings.py
 .vscode/
 .idea/
 .DS_Store
+
+.terraform/
+*.tfstate
+*.tfstate.backup

@@ -1,0 +1,17 @@
+name: Django CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t meu-app-django:latest .
+
+      - name: Run Tests
+        run: docker run meu-app-django:latest python manage.py test
